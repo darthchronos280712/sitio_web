@@ -11,7 +11,8 @@
 @section('contenido')
 <div class="mb-4 content-card">
     <h2>Contáctanos</h2>
-    <form action="#" method="POST">
+    <form action="{{ url('/guardarOpinion') }}" method="POST">
+        @csrf
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>

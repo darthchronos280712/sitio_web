@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MensajeController;
+
+
+Route::get('/', function () { 
+    return view('index'); 
+});
 
 Route::get('/index', function () { 
     return view('index'); 
@@ -21,3 +27,5 @@ Route::get('/ubicacion', function () {
 Route::get('/formulario', function () { 
     return view('formulario'); 
 });
+
+Route::post('/guardarOpinion', [MensajeController::class, 'guardarOpinion']);
